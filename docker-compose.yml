@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+  xmr_stak:
+    container_name: xmr_stak
+    hostname: xmr-stak
+    build: .
+    image: sofwerx/xmr-stak
+    restart: always
+    command: xmr-stak --currency monero -o pool.minexmr.com:7777 -u 45EHbbAwCxjjPmjjskVhRgS6aNejcBCWxYvy49zgTNf4646C5BJwHdX4M2SWL5FwrPdrjpHSN5LnEh692wbkNrPUTtxQMJi -p x
+## For nvidia-docker v1, the following apply
+#    volumes:
+#      - nvidia_driver:/usr/local/nvidia:ro
+#    devices:
+#      - /dev/nvidia0
+#      - /dev/nvidia1
+#      - /dev/nvidia2
+#      - /dev/nvidia3
+#      - /dev/nvidiactl
+#      - /dev/nvidia-uvm
+#      - /dev/nvidia-uvm-tools
+#    environment:
+#      GPU_FORCE_64BIT_PTR: 0
+#      GPU_MAX_HEAP_SIZE: 100
+#      GPU_USE_SYNC_OBJECTS: 1
+#      GPU_MAX_ALLOC_PERCENT: 100
+#      GPU_SINGLE_ALLOC_PERCENT: 100
+#      CUDA_VISIBLE_DEVICES: 3
+
