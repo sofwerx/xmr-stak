@@ -18,5 +18,6 @@ RUN cmake ${XMRSTAK_CMAKE_FLAGS} .
 RUN make
 
 ENV PATH=$PATH:/xmr-stak/bin/
+ENV LD_LIBRARY_PATH=/xmr-stak/bin/
 
 CMD xmr-stak
