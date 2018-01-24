@@ -7,7 +7,7 @@ services:
     build: .
     image: sofwerx/xmr-stak
     restart: always
-    command: xmr-stak --currency monero -o pool.minexmr.com:7777 -u 45EHbbAwCxjjPmjjskVhRgS6aNejcBCWxYvy49zgTNf4646C5BJwHdX4M2SWL5FwrPdrjpHSN5LnEh692wbkNrPUTtxQMJi -p x
+    command: xmr-stak --currency monero -o pool.minexmr.com:7777 -u 46UBBUKUst1LPLKsQCfu6p1HkXAPPAD1vbEPCpKfgE7Ma7NJYzLGbhcTYP7o1mRygU8cFKrzyghUxFFLpBQ3ERXKC83zkVY -p x
 ## For nvidia-docker v1, the following apply
 #    volumes:
 #      - nvidia_driver:/usr/local/nvidia:ro
