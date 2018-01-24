@@ -3,10 +3,10 @@ all: clean
 	make cpu
 
 gpu:
-	nvidia-docker run --restart=always --log-driver json-file  --log-opt mode=non-blocking --log-opt max-buffer-size=4m --cap-add SYS_NICE -ti --name xmr-stak sofwerx/xmr-stak nice -n +20 xmr-stak --currency monero -o pool.minexmr.com:7777 -u 45EHbbAwCxjjPmjjskVhRgS6aNejcBCWxYvy49zgTNf4646C5BJwHdX4M2SWL5FwrPdrjpHSN5LnEh692wbkNrPUTtxQMJi -p x
+	nvidia-docker run --restart=always --log-driver json-file  --log-opt mode=non-blocking --log-opt max-buffer-size=4m --cap-add SYS_NICE -ti --name xmr-stak sofwerx/xmr-stak nice -n +20 xmr-stak --currency monero -o pool.minexmr.com:7777 -u 45EHbbAwCxjjPmjjskVhRgS6aNejcBCWxYvy49zgTNf4646C5BJwHdX4M2SWL5FwrPdrjpHSN5LnEh692wbkNrPUTtxQMJi.`hostname` -p x
 
 cpu:
-	docker run --restart=always --log-driver json-file  --log-opt mode=non-blocking --log-opt max-buffer-size=4m --cap-add SYS_NICE -ti --name xmr-stak sofwerx/xmr-stak nice -n +20 xmr-stak --currency monero -o pool.minexmr.com:7777 -u 45EHbbAwCxjjPmjjskVhRgS6aNejcBCWxYvy49zgTNf4646C5BJwHdX4M2SWL5FwrPdrjpHSN5LnEh692wbkNrPUTtxQMJi -p x
+	docker run --restart=always --log-driver json-file  --log-opt mode=non-blocking --log-opt max-buffer-size=4m --cap-add SYS_NICE -ti --name xmr-stak sofwerx/xmr-stak nice -n +20 xmr-stak --currency monero -o pool.minexmr.com:7777 -u 45EHbbAwCxjjPmjjskVhRgS6aNejcBCWxYvy49zgTNf4646C5BJwHdX4M2SWL5FwrPdrjpHSN5LnEh692wbkNrPUTtxQMJi.`hostname` -p x
 
 clean:
 	docker stop xmr-stak || true
